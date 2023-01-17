@@ -1,0 +1,31 @@
+.input-ingresar {
+   width : 195px;
+   text-align: center;
+   height: 3.125rem;
+   font-size : 1.25rem;
+   font-family: 'Montserrat', sans-serif;
+
+}
+
+.btn-ingresar{
+  width : 195px;
+
+}
+
+.contenedor{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.link{
+  text-decoration: none;
+  font-weight: bold;
+  color : #fff;
+}
+
+.text{
+  color : #fff;
+}
