@@ -1,7 +1,7 @@
 import { Pregunta } from "./pregunta.model";
 
 export class Cuestionario{
-  id?: number;
+  id?: string;
   uid : string;
   titulo : string;
   descripcion : string;
