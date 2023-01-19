@@ -11,11 +11,14 @@ export class RespuestaUsuarioComponent implements OnInit{
   id : string;
   loading : boolean = false;
   respuestaCuestionario : any;
+  rutaAnterior : string =''
   constructor(
     private _respuestaUsuarioService : RespuestaQuizzService,
     private aRoute : ActivatedRoute,
     private router :Router
   ){
+
+    this.rutaAnterior  = this.aRoute.snapshot.url[0].path
     this.id = this.aRoute.snapshot.paramMap.get('id')!;
   }
   ngOnInit(): void {
@@ -46,6 +49,11 @@ export class RespuestaUsuarioComponent implements OnInit{
   }
 
   volver(){
-    this.router.navigate(['/'])
+    if(this.rutaAnterior === 'respuestaUsuarioAdmin'){
+        this.router.navigate(['/dashboard/estadisticas',this.respuestaCuestionario.idCuestionario])
+    }else{
+      this.router.navigate(['/'])
+    }
+
   }
 }
