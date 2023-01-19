@@ -6,6 +6,7 @@ import { IngresarNombreComponent } from './ingresar-nombre/ingresar-nombre.compo
 import { ContadorInicialComponent } from './contador-inicial/contador-inicial.component';
 import { RealizarQuizzComponent } from './realizar-quizz/realizar-quizz.component';
 import { FormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     JugarRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class JugarModule { }

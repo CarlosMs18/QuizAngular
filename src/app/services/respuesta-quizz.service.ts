@@ -16,4 +16,12 @@ export class RespuestaQuizzService {
   searchByCode(code : string) : Observable<any>{
    return this._firestore.collection('cuestionarios',ref => ref.where('codigo','==',code)).get()
   }
+
+  setRespuestaUsuario(respuestaUsuario : any) : Promise<any>{
+    return this._firestore.collection('respuestas').add(respuestaUsuario)
+  }
+
+  getRespuestaUsuario(id : string) : Observable<any>{
+    return this._firestore.collection('respuestas').doc(id).get()
+  }
 }
